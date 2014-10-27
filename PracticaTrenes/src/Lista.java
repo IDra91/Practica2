@@ -27,9 +27,9 @@ static int opcion;
 			case 4:
 				lista.buscarElemento(20);
 				if(lista.buscarElemento(20))
-					System.out.println("El numero buscado si est· en la lista");
+					System.out.println("El numero buscado si est√° en la lista");
 				else
-					System.out.println("El numero buscado no est· en la lista");
+					System.out.println("El numero buscado no est√° en la lista");
 				break;
 			default:
 				System.out.println("Opcion incorrecta");
@@ -49,7 +49,7 @@ void agregar (int elemento){
 void mostrar(){
 	Nodo temporal = inicio;
 	if (temporal == null){
-	System.out.println("La lista est· vacÌa, por favor agregue datos");
+	System.out.println("La lista est√° vac√≠a, por favor agregue datos");
 	}else{
 		while(temporal!= null){
 		System.out.println(temporal.elemento);
@@ -90,3 +90,4 @@ boolean buscarElemento(int elemento){
 	return false;
 }
 }
+NOOOOB!!
