@@ -3,33 +3,37 @@ import java.util.Scanner;
 public class Lista {
 Nodo inicio = null;
 static int opcion;
+static int dato;
 	public static void main(String[] args) {
 		
 		Lista lista = new Lista();
 		Scanner s = new Scanner(System.in);
 		
 		do{
-			System.out.println("1)Agregar elementos\n"+"2) Remover elementos\n"+"3) Mostrar elementos\n"+"4) Buscar Elementos\n");
+			System.out.println("1) Agregar elementos\n"+"2) Remover elementos\n"+"3) Mostrar elementos\n"+"4) Buscar Elementos\n");
 			opcion = s.nextInt();
 			switch(opcion){
 			case 1:
-				lista.agregar(10);
-				lista.agregar(10);
-				lista.agregar(10);
-				lista.agregar(20);
+				System.out.println("Por favor ingrese un dato para agregar");
+				dato = s.nextInt();
+				lista.agregar(dato);
 				break;
 			case 2:
-				lista.eliminar(10);
+				System.out.println("Por favor ingrese el dato que desea eliminar");
+				dato = s.nextInt();
+				lista.eliminar(dato);
 				break;
 			case 3:
 				lista.mostrar();
 				break;
 			case 4:
-				lista.buscarElemento(20);
-				if(lista.buscarElemento(20))
-					System.out.println("El numero buscado si est√° en la lista");
+				System.out.println("Por favor ingrese el dato que desea buscar");
+				dato = s.nextInt();
+				lista.buscarElemento(dato);
+				if(lista.buscarElemento(dato))
+					System.out.println("El numero buscado si est· en la lista");
 				else
-					System.out.println("El numero buscado no est√° en la lista");
+					System.out.println("El numero buscado no est· en la lista");
 				break;
 			default:
 				System.out.println("Opcion incorrecta");
@@ -49,7 +53,7 @@ void agregar (int elemento){
 void mostrar(){
 	Nodo temporal = inicio;
 	if (temporal == null){
-	System.out.println("La lista est√° vac√≠a, por favor agregue datos");
+	System.out.println("La lista est· vacÌa, por favor agregue datos");
 	}else{
 		while(temporal!= null){
 		System.out.println(temporal.elemento);
@@ -90,4 +94,3 @@ boolean buscarElemento(int elemento){
 	return false;
 }
 }
-NOOOOB!!
